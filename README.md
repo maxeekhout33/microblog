@@ -8,6 +8,7 @@ Python package and Flask extension installed in this app: <br>
 :small_orange_diamond: flask-wtf <br>
 :small_orange_diamond: flask-sqlalchemy <br>
 :small_orange_diamond: flask-migrate <br>
-:small_orange_diamond: flask-login
+:small_orange_diamond: flask-login <br>
+:small_orange_diamond: email-validator external dependency
 <br>
 Made with :blue_heart: by Max 
