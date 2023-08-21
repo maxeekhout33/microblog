@@ -9,6 +9,10 @@ Python package and Flask extension installed in this app: <br>
 :small_orange_diamond: flask-sqlalchemy <br>
 :small_orange_diamond: flask-migrate <br>
 :small_orange_diamond: flask-login <br>
-:small_orange_diamond: email-validator external dependency
+:small_orange_diamond: email-validator external dependency<br>
+
 <br>
-Made with :blue_heart: by Max 
+To provide images for all users is used the Gravatar service. <br>
+The Gravatar service is very simple to use. To request an image for a given user, a URL with the format https://www.gravatar.com/avatar/<hash>, where <hash> is the MD5 hash of the user's email address. <br>
+<br>
+Made to learn with :blue_heart: by Max 
