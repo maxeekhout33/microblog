@@ -3,7 +3,6 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextA
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
 from app.models import User
 
-
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
@@ -42,3 +41,6 @@ class EditProfileForm(FlaskForm):
             user = User.query.filter_by(username=self.username.data).first()
             if user is not None:
                 raise ValidationError('Please use a different username.')
+            
+class EmptyForm(FlaskForm):
+    submit = SubmitField('Submit')
