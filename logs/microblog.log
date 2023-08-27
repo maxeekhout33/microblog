@@ -30,3 +30,4 @@ jinja2.exceptions.TemplateNotFound: email/reset_password.txt
 2023-08-25 16:53:57,804 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:46]
 2023-08-25 16:57:22,715 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:46]
 2023-08-25 16:58:41,811 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:46]
+2023-08-27 13:54:11,949 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:46]

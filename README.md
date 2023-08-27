@@ -12,7 +12,8 @@ Python package and Flask extension installed in this app: <br>
 :small_orange_diamond: email-validator external dependency <br>
 :small_orange_diamond: flask-mail <br>
 :small_orange_diamond: pyjwt <br>
-:small_orange_diamond: flask-bootstrap 
+:small_orange_diamond: flask-bootstrap <br>
+:small_orange_diamond: flask-moment
 
 <br>
 To provide images for all users is used the Gravatar service. <br>
