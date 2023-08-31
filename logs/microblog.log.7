@@ -1,0 +1,84 @@
+2023-08-30 15:30:34,447 ERROR: Exception on / [GET] [in /home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/max-eekhout/projects/microblog-python-flask/app/routes.py", line 51, in index
+    return render_template(
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 26, in block 'body'
+    {% block scripts %}
+  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 59, in block 'scripts'
+    $(destElem).html('<img src="{{ url_for(',static,', filename=',loading.gif,',) }}">');
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint ',static,' with values ['filename']. Did you mean 'static' instead?
+2023-08-30 15:31:25,447 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
+2023-08-30 15:31:28,575 ERROR: Exception on / [GET] [in /home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py:1414]
+Traceback (most recent call last):
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/max-eekhout/projects/microblog-python-flask/app/routes.py", line 51, in index
+    return render_template(
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/templating.py", line 132, in _render
+    rv = template.render(context)
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 26, in block 'body'
+    {% block scripts %}
+  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 59, in block 'scripts'
+    $(destElem).html('<img src="{{ url_for(static, filename=loading.gif) }}">');
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/jinja2/environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'loading' is undefined
+2023-08-30 15:40:22,907 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]

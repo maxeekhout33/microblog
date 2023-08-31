@@ -1,4 +1,4 @@
-2023-08-30 14:29:05,929 ERROR: Exception on /favicon.ico [GET] [in /home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py:1414]
+2023-08-31 21:53:53,265 ERROR: Exception on /favicon.ico [GET] [in /home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py:1414]
 Traceback (most recent call last):
   File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
     rv = self.dispatch_request()
@@ -23,8 +23,8 @@ Traceback (most recent call last):
     return self.handle_http_exception(e)
   File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1281, in handle_http_exception
     return self.ensure_sync(handler)(e)
-  File "/home/max-eekhout/projects/microblog-python-flask/app/errors.py", line 6, in not_found_error
-    return render_template('404.html'), 404
+  File "/home/max-eekhout/projects/microblog-python-flask/app/errors/handlers.py", line 8, in not_found_error
+    return render_template('errors/404.html'), 404
   File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/templating.py", line 151, in render_template
     return _render(app, template, context)
   File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/templating.py", line 132, in _render
@@ -33,7 +33,7 @@ Traceback (most recent call last):
     self.environment.handle_exception()
   File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
     raise rewrite_traceback_stack(source=source)
-  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/404.html", line 1, in top-level template code
+  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/errors/404.html", line 1, in top-level template code
     {% extends "base.html" %}
   File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
@@ -43,60 +43,17 @@ Traceback (most recent call last):
     {%- block html %}
   File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
     {% block body -%}
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 26, in block 'body'
-    {% block scripts %}
-  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 58, in block 'scripts'
-    $(destElem).html('<img src="{{ url_for(static, filename=loading.gif) }}">');
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/jinja2/environment.py", line 485, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'loading' is undefined
-2023-08-30 14:30:14,366 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 14:35:20,935 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 14:35:24,342 ERROR: Exception on / [GET] [in /home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py:1414]
-Traceback (most recent call last):
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/max-eekhout/projects/microblog-python-flask/app/routes.py", line 51, in index
-    return render_template(
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/templating.py", line 151, in render_template
-    return _render(app, template, context)
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/templating.py", line 132, in _render
-    rv = template.render(context)
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/index.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 26, in block 'body'
-    {% block scripts %}
-  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 58, in block 'scripts'
-    $(destElem).html('<img src="{{ url_for() }}">');
-TypeError: url_for() missing 1 required positional argument: 'endpoint'
-2023-08-30 14:40:43,963 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 14:42:00,005 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 14:42:09,899 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 14:42:21,122 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 14:48:22,663 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 14:49:36,390 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 14:50:46,699 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 14:52:31,736 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 14:55:49,747 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 14:55:56,393 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 15:30:30,828 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 48, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/errors/404.html", line 5, in block 'app_content'
+    <p><a href="{{ url_for('index') }}">{{ _('Back') }}</a></p>
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
+2023-08-31 22:24:49,836 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:82]
