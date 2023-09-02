@@ -16,7 +16,8 @@ Python package and Flask extension installed in this app: <br>
 :small_orange_diamond: flask-moment <br>
 :small_orange_diamond: flask-babel <br>
 :small_orange_diamond: langdetect Python Library <br>
-:small_orange_diamond: requests
+:small_orange_diamond: requests <br>
+:small_orange_diamond: elasticsearch client library 
 
 To provide images for all users is used the Gravatar service. <br>
 The Gravatar service is very simple to use. To request an image for a given user, a URL with the format https://www.gravatar.com/avatar/hash, where hash is the MD5 hash of the user's email address. <br>
