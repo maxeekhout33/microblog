@@ -1,4 +1,4 @@
-2023-08-31 22:25:06,831 ERROR: Exception on /favicon.ico [GET] [in /home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py:1414]
+2023-09-05 20:02:47,490 ERROR: Exception on /favicon.ico [GET] [in /home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py:1414]
 Traceback (most recent call last):
   File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
     rv = self.dispatch_request()
@@ -45,7 +45,7 @@ Traceback (most recent call last):
     {% block body -%}
   File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
     {% block content -%}
-  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 48, in block 'content'
+  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 55, in block 'content'
     {% block app_content %}{% endblock %}
   File "/home/max-eekhout/projects/microblog-python-flask/app/templates/errors/404.html", line 5, in block 'app_content'
     <p><a href="{{ url_for('index') }}">{{ _('Back') }}</a></p>

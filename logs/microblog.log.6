@@ -1,42 +1,4 @@
-2023-08-30 15:40:28,601 ERROR: Exception on / [GET] [in /home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py:1414]
-Traceback (most recent call last):
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/max-eekhout/projects/microblog-python-flask/app/routes.py", line 51, in index
-    return render_template(
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/templating.py", line 151, in render_template
-    return _render(app, template, context)
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/templating.py", line 132, in _render
-    rv = template.render(context)
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 59, in template
-    $(destElem).html('<img src="{{ url_for(/home/max-eekhout/projects/microblog-python-flask/app/static/loading.gif) }}">');
-jinja2.exceptions.TemplateSyntaxError: unexpected '/'
-2023-08-30 16:00:37,858 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 16:02:59,361 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 16:04:05,641 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 16:05:07,602 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 16:05:22,466 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-30 16:38:02,919 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:59]
-2023-08-31 21:28:08,563 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:82]
-2023-08-31 21:28:41,283 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:82]
-2023-08-31 21:28:52,132 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:82]
-2023-08-31 21:28:55,233 ERROR: Exception on /favicon.ico [GET] [in /home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py:1414]
+2023-09-05 19:50:47,464 ERROR: Exception on /favicon.ico [GET] [in /home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py:1414]
 Traceback (most recent call last):
   File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask/app.py", line 1484, in full_dispatch_request
     rv = self.dispatch_request()
@@ -83,7 +45,7 @@ Traceback (most recent call last):
     {% block body -%}
   File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
     {% block content -%}
-  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 48, in block 'content'
+  File "/home/max-eekhout/projects/microblog-python-flask/app/templates/base.html", line 55, in block 'content'
     {% block app_content %}{% endblock %}
   File "/home/max-eekhout/projects/microblog-python-flask/app/templates/errors/404.html", line 5, in block 'app_content'
     <p><a href="{{ url_for('index') }}">{{ _('Back') }}</a></p>
@@ -94,3 +56,6 @@ Traceback (most recent call last):
   File "/home/max-eekhout/projects/microblog-python-flask/venv/lib/python3.9/site-packages/werkzeug/routing/map.py", line 950, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
+2023-09-05 19:54:09,634 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:88]
+2023-09-05 19:59:52,187 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:88]
+2023-09-05 19:59:57,814 INFO: Microblog startup [in /home/max-eekhout/projects/microblog-python-flask/app/__init__.py:88]
