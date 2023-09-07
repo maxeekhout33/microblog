@@ -7,7 +7,7 @@ from flask import (
     request,
     g,
     jsonify,
-    current_app
+    current_app,
 )
 from flask_login import current_user, login_required
 from flask_babel import _, get_locale
@@ -202,3 +202,11 @@ def search():
         next_url=next_url,
         prev_url=prev_url,
     )
+
+
+@bp.route("/user/<username>/popup")
+@login_required
+def user_popup(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    form = EmptyForm()
+    return render_template("user_popup.html", user=user, form=form)
